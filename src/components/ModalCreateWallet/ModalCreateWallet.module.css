@@ -1,0 +1,42 @@
+.mainView {
+  padding: 20px;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+}
+
+.itemView {
+  padding: 12px 16px;
+  background-color: var(--walletItemColor);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemView:first-child {
+  margin-bottom: 16px;
+}
+
+.title {
+  color: var(--font);
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.description {
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.plusIcon {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+}
+
+.downloadIcon {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+}

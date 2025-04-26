@@ -1,0 +1,45 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  background-color: var(--font);
+  border-radius: 20px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 7px 7px 7px 0;
+}
+
+.items {
+  width: 100%;
+}
+
+.rowView {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--font);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.text {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.titleAmount {
+  color: var(--font);
+  font-size: 14px;
+}

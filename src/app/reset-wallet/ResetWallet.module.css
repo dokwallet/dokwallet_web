@@ -1,0 +1,103 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.infoList {
+  width: 100%;
+}
+
+.titleInfo {
+  color: var(--font-color);
+  font-size: 28px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.info {
+  color: var(--gray-color);
+  font-size: 17px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.learnText {
+  color: var(--background);
+  font-size: 17px;
+  text-align: left;
+}
+
+.btnList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .btnList {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.btn {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0px 16px 16px rgba(50, 50, 71, 0.08))
+    drop-shadow(0px 16px 16px rgba(50, 50, 71, 0.08));
+}
+
+@media (min-width: 500px) {
+  .btn {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.textBox {
+  position: absolute;
+  left: 3%;
+  bottom: 3%;
+  font-size: 17px;
+}
+
+.textBox2 {
+  position: absolute;
+  left: 5%;
+  bottom: 3%;
+  font-size: 17px;
+}
+
+.icon_plus > svg {
+  height: 17px;
+  width: 17px;
+  fill: var(--backgroundColor);
+  position: absolute;
+  top: 5%;
+  left: 4%;
+}
+
+.icon_create > svg,
+.icon_create > img {
+  position: absolute;
+  left: 18.53%;
+  right: 6.07%;
+  top: 9%;
+  bottom: 11.43%;
+}
+
+.icon_arrow > svg {
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  left: 4%;
+  top: 7%;
+  stroke: var(--backgroundColor);
+}

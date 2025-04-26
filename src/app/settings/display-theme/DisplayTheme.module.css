@@ -1,0 +1,51 @@
+.container {
+  background-color: var(--backgroundColor);
+  padding: 20px;
+}
+
+.section {
+  justify-content: center;
+}
+
+.title {
+  color: var(--gray);
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item {
+  color: var(--font);
+  font-size: 16px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.itembox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.mark,
+.markActive {
+  position: absolute;
+  left: -5px;
+}
+
+.mark > svg {
+  fill: var(--font);
+  width: 24px;
+  height: 24px;
+}
+.markActive > svg {
+  fill: var(--background);
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,103 @@
+.section {
+  align-items: center;
+  flex-direction: row;
+  height: 52px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  flex: 1;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.rowStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 24px;
+}
+
+.item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemNumber {
+  align-items: flex-end;
+}
+
+.title {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+}
+
+.text {
+  color: var(--gray);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  text-align: right;
+}
+
+.iconBox {
+  width: 39px;
+  height: 39px;
+  background-color: var(--font);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.iconBox > svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--backgroundColor);
+}
+
+.arrow > svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--gray);
+}
+
+.btn {
+  align-self: center;
+}
+
+.chainDisplayName {
+  margin-left: 5px;
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  border-radius: 10px;
+  background-color: var(--walletItemColor);
+  text-align: center;
+  padding: 0 10px;
+}
+
+.boxBtn {
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}

@@ -1,0 +1,87 @@
+.box {
+  background-color: var(--whiteOutline);
+  padding: 0 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 20px 5px 20px;
+}
+
+.itemView {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxBalance {
+  color: var(--gray);
+  font-size: 16px;
+  font-family: var(--font-roboto);
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.title {
+  color: var(--gray);
+  font-size: 16px;
+  font-family: var(--font-roboto);
+  margin-right: 8px;
+}
+
+.button {
+  width: 30%;
+  margin: auto;
+  background-color: var(--background);
+  height: 60px;
+  border-radius: 10px;
+  color: var(--title);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.stakingTitle {
+  color: var(--font);
+  font-size: 16px;
+  font-Weight: 600;
+  margin-bottom: 8px;
+  margin-Left: 20px;
+}
+
+.createStakingWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.stakingItemWrapper {
+  max-height: 370px;
+  overflow: auto;
+}
+.rightItemView {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.buttonStyle {
+  padding: 0 12px;
+  justify-content: center;
+  height: 32px;
+  border: 1px solid var(--background);
+  border-radius: 8px;
+  margin-left: 8px;
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+}
+
+.errorTitle {
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  color: red;
+  margin: 0 20px 20px;
+  text-align: right;
+}

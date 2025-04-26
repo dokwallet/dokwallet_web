@@ -1,0 +1,196 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+  align-items: center;
+  width: 100%;
+}
+
+.goBack {
+  margin: 20px;
+}
+
+.contentContainerStyle {
+  padding: 20px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--backgroundColor);
+  width: 100%;
+}
+
+.title {
+  color: var(--gray);
+  font-size: 18px;
+  text-align: left;
+
+  margin-bottom: 5px;
+}
+
+.box {
+  display: flex;
+}
+
+.boxTitle {
+  color: var(--font);
+  font-size: 20px;
+  text-align: left;
+
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.boxBalance {
+  color: var(--gray);
+  font-size: 18px;
+  text-align: left;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formInput {
+  width: 100%;
+}
+
+.boxInput {
+  width: 45%;
+}
+
+.boxInputFull {
+  width: 100%;
+}
+.infoText {
+  margin-left: 10px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.inputView {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.input {
+  background-color: var(--backgroundColor);
+  border: 1px solid;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: var(--font);
+}
+
+.btnMax {
+  display: flex;
+  position: absolute;
+  top: 25px; /* Замініть на потрібне значення */
+  right: 16px; /* Замініть на потрібне значення */
+  transform: translateY(-60%);
+  background-color: var(--background);
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--background);
+  color: var(--backgroundColor);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.btnText {
+  color: var(--backgroundColor);
+  font-size: 12px;
+}
+
+.scan {
+  background-color: var(--font); /* Замініть на потрібний колір */
+}
+
+.textConfirm {
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.listTitle {
+  color: var(--font);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blockList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%; /* Замініть на потрібний розмір */
+}
+
+.blockTitle {
+  color: var(--font);
+  font-size: 18px;
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.boxText {
+  color: var(--font);
+  font-size: 18px;
+  text-align: right;
+}
+
+.switchList {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10%; /* Замініть на потрібний розмір */
+}
+
+.switchText {
+  color: var(--font);
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.button {
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Замініть на потрібний розмір */
+  margin: 40px 0 20px 0;
+}
+
+.buttonTitle {
+  color: var(--title);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
+
+  .boxInput {
+    width: 100%;
+  }
+
+  .inputWrapper {
+    margin-top: 0;
+  }
+}

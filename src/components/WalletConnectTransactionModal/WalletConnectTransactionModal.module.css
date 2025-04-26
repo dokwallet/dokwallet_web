@@ -1,0 +1,178 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-height: var(--app-height);
+}
+
+.imageStyle {
+  object-fit: contain;
+  margin-right: 8px;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+}
+
+.borderView {
+  height: 1.5px;
+  background-color: var(--whiteOutline);
+  width: 100%;
+}
+
+.mainImageStyle {
+  width: 80%;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .mainImageStyle {
+    height: 150px;
+  }
+}
+
+.mainView {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+@media (min-width: 769px) {
+  .mainView {
+    padding: 10px 20px;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.url {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.bottomView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .bottomView {
+    padding: 10px 20px;
+  }
+}
+
+.rowView {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: var(--background);
+  height: 60px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+  color: var(--title);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.errorText {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.formInput {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .formInput {
+    padding: 10px 20px;
+  }
+}
+
+.amountTitle {
+  color: var(--font);
+  font-size: 32px;
+  text-align: left;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.boxBalance {
+  color: var(--gray);
+  font-size: 16px;
+  text-align: left;
+  align-self: center;
+}
+
+.transferItemView {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box2Balance {
+  background-color: var(--white-outline);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.transferTitle {
+  color: var(--font);
+  font-size: 16px;
+  text-align: left;
+}
+
+.contentContainerStyle {
+  padding: 5px 10px;
+}
+
+@media (min-width: 769px) {
+  .contentContainerStyle {
+    padding: 10px 20px;
+  }
+}
+
+.scrollView {
+  background-color: var(--backgroundColor);
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 16px
+}
+
+
+.chainTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--font);
+  text-align: left;
+  margin-top: 12px;
+  align-self: flex-start;
+}

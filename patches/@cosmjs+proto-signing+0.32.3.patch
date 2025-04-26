@@ -1,0 +1,29 @@
+diff --git a/node_modules/@cosmjs/proto-signing/build/directsecp256k1hdwallet.js b/node_modules/@cosmjs/proto-signing/build/directsecp256k1hdwallet.js
+index 660cee0..ba023f2 100644
+--- a/node_modules/@cosmjs/proto-signing/build/directsecp256k1hdwallet.js
++++ b/node_modules/@cosmjs/proto-signing/build/directsecp256k1hdwallet.js
+@@ -155,10 +155,11 @@ class DirectSecp256k1HdWallet {
+     }
+     async getAccounts() {
+         const accountsWithPrivkeys = await this.getAccountsWithPrivkeys();
+-        return accountsWithPrivkeys.map(({ algo, pubkey, address }) => ({
++        return accountsWithPrivkeys.map(({ algo, pubkey, address, privkey }) => ({
+             algo: algo,
+             pubkey: pubkey,
+             address: address,
++            privateKey: privkey,
+         }));
+     }
+     async signDirect(signerAddress, signDoc) {
+diff --git a/node_modules/@cosmjs/proto-signing/build/signer.d.ts b/node_modules/@cosmjs/proto-signing/build/signer.d.ts
+index 71d6f72..e8b8727 100644
+--- a/node_modules/@cosmjs/proto-signing/build/signer.d.ts
++++ b/node_modules/@cosmjs/proto-signing/build/signer.d.ts
+@@ -6,6 +6,7 @@ export interface AccountData {
+     readonly address: string;
+     readonly algo: Algo;
+     readonly pubkey: Uint8Array;
++    readonly privateKey: Uint8Array;
+ }
+ export interface DirectSignResponse {
+     /**

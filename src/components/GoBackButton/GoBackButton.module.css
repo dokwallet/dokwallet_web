@@ -1,0 +1,10 @@
+.btn {
+  border: 1px solid var(--whiteOutline);
+  border-radius: 6px;
+  padding: 5px 20px;
+}
+
+.btn > svg {
+  fill: var(--font);
+  display: block;
+}

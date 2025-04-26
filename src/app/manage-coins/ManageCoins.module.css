@@ -1,0 +1,59 @@
+.mainView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--app-height) - 135px);
+}
+.goBack {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 45px;
+}
+
+.extraElementContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.searchView {
+  align-items: center;
+  margin: 0 10px;
+}
+
+.btnList {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnAdd {
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--backgroundColor);
+}
+
+.btnAdd > svg {
+  fill: var(--gray);
+  width: 24px;
+  height: 24px;
+}
+
+.box {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.title {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+}
+
+.text {
+  color: var(--gray);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+}

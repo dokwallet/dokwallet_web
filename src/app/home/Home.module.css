@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--app-height) - 70px);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.headerTitle {
+  color: var(--gray);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+}
+
+.headerNumber {
+  color: var(--font);
+  font-size: 24px;
+  font-family: var(--font-roboto);
+}
+
+.btnBox {
+  position: absolute;
+  z-index: 10;
+  bottom: 25px;
+  align-self: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--whiteOutline);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--whiteOutline);
+  margin: 20px;
+  position: relative;
+}
+
+.chatBtnContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--whiteOutline);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--whiteOutline);
+  margin: 20px;
+  position: absolute;
+  right: 205px;
+  bottom: 25px;
+}
+
+.btnText {
+  color: var(--font);
+  font-size: 16px;
+  font-family: var(--font-roboto);
+  margin-right: 10px;
+  margin-left: 4px;
+}
+
+.btn > svg , .chatBtnContainer > svg {
+  fill: var(--background);
+  width: 25px;
+  height: 25px;
+}
+
+.syncView {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 60px;
+  flex-direction: row;
+  display:flex;
+  background-color: var(--walletItemColor);
+  align-items: center;
+}
+
+.syncButton {
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 40px;
+  background-color: var(--background);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.syncTitle {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+  flex: 1;
+  display:flex;
+}
+
+.syncButtonTitle {
+  color: white;
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+}
+

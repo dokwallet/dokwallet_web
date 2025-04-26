@@ -1,0 +1,22 @@
+.section {
+  justify-content: center;
+}
+
+.title {
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.item {
+  color: var(--font);
+  font-size: 14px;
+}
+
+.itembox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}

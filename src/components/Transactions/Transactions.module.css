@@ -1,0 +1,109 @@
+.section {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray);
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.field {
+  display: flex;
+  margin-right: 5px;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.itemNumber {
+  display: flex;
+  align-items: flex-end;
+}
+
+.title {
+  color: var(--gray);
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.hyphen {
+  color: var(--gray);
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.text {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.arrow {
+  fill: var(--gray);
+  width: 30px;
+  display: flex;
+  text-align: center;
+}
+
+.info {
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  width: 70%;
+}
+
+.rowView {
+  display: flex;
+  align-items: center;
+  gap: 16px 24px;
+}
+
+.button {
+  display: flex;
+  height: 40px;
+  background-color: var(--background);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 0 12px;
+  flex-direction: row;
+  gap: 12px;
+  padding: 0 16px;
+  max-width: 220px;
+  color: white;
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+}
+.cancelButton {
+
+}
+.button >  svg {
+  fill: white;
+  stroke: white;
+  height: 20px;
+  width: 20px;
+}
+
+.cancelButton >  svg {
+  fill: white;
+  height: 12px;
+  width: 12px;
+}

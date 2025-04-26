@@ -1,0 +1,29 @@
+.flex1 {
+  flex: 1;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--app-height);
+}
+
+.paddingView {
+  padding: 20;
+  background-color: white;
+  position: absolute;
+  z-index: 9999;
+  padding-bottom: 20;
+  bottom: 0;
+}
+
+.text {
+  color: var(--gray);
+  font-size: 16;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  margin: 0 20px;
+}

@@ -1,0 +1,153 @@
+.safeAreaView {
+    display: flex;
+    flex: 1;
+    background-color: var(--backgroundColor);
+}
+
+.container {
+    width: 100%;
+    background-color: var(--backgroundColor);
+    padding: 20px;
+}
+
+.inputWrtapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formInput {
+    padding-top: 20px;
+}
+
+.deleteIcon {
+    cursor: pointer;
+}
+
+.deleteIcon > svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.deleteIcon > svg:hover {
+    fill: red;
+}
+
+.brand {
+    color: var(--font);
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.input {
+    background-color: var(--backgroundColor);
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+    width: 100%;
+    color: var(--font);
+}
+
+.textConfirm {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: red;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.infoContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.infoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoIcon > svg {
+    width: 20px;
+    height: 20px;
+}
+
+.listTitle {
+    color: var(--font);
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.itemSection {
+    margin-left: 20px;
+}
+
+.itemIcon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemIcon > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.itemName {
+    color: var(--font);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.itemText {
+    font-size: 12px;
+}
+
+.button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: var(--background);
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.buttonTitle {
+    color: var(--title);
+    font-size: 16px;
+}
+
+.textWarning {
+    margin-bottom: 20px;
+    color: red;
+    font-size: 15px;
+}
+
+@media (min-width: 769px) {
+    .button {
+        width: 50%;
+    }
+}

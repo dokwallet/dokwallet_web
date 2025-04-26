@@ -1,0 +1,40 @@
+.container {
+    height: calc(var(--app-height));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.subContainer {
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.bottomView {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+.messageText {
+    color: var(--font);
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    white-space: pre-wrap;
+}
+.contactText {
+    color: black;
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    display: inline-block;
+}
+.buttonContactText {
+    color: #0000EE;
+    font-size: 15px;
+    font-family: var(--font-roboto);
+    display: inline-block;
+    text-decoration-line: underline;
+    cursor: pointer;
+}

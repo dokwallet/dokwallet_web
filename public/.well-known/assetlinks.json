@@ -1,0 +1,32 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dok.wallet",
+      "sha256_cert_fingerprints": [
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dok.wallet",
+      "sha256_cert_fingerprints":
+      ["82:F2:0F:8D:01:E9:F7:57:FD:AB:F4:80:2F:04:12:99:B3:49:E4:82:7F:8F:A9:D5:29:20:4F:79:DC:85:45:68"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dok.wallet",
+      "sha256_cert_fingerprints":
+      ["3E:59:03:E8:4F:F8:A8:C2:8E:8D:58:57:DF:DF:3F:F9:5A:12:79:5E:82:43:FF:28:06:35:89:3C:A7:34:B9:27", "E4:31:82:C8:35:A9:85:19:9C:FE:7E:50:25:1C:14:AD:4E:CB:2F:76:94:61:13:AC:A7:BD:17:09:6D:30:0A:15"]
+    }
+  }
+]

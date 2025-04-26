@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--backgroundColor);
+  border-bottom: 0.5px solid var(--gray);
+  flex-wrap: wrap;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconBoxChecked,
+.iconBox {
+  width: 39px;
+  height: 39px;
+  border-radius: 20px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.iconBoxChecked > svg,
+.iconBox > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.iconBoxChecked {
+  background-color: var(--backgroundColor);
+}
+
+.iconBox {
+  background-color: var(--background);
+  border: 1px solid var(--gray);
+}
+.iconBox > svg,
+.iconBoxChecked > svg {
+  fill: var(--font);
+}
+
+.items {
+  align-items: flex-start;
+  /* width: var(--item-width); */
+}
+
+.title {
+  color: var(--font);
+  font-size: 15px;
+}

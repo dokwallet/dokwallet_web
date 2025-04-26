@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mainImageStyle {
+  width: 80%;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .mainImageStyle {
+    height: 150px;
+  }
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: var(--title);
+  font-size: 16px;
+}
+
+.borderView {
+  height: 1.5px;
+  background-color: var(--whiteOutline);
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

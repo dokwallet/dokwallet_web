@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  height: calc(var(--app-height) - 70px);
+}
+
+.goBack {
+  margin-bottom: 15px;
+}
+.formInput {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.formInput > div {
+  margin-bottom: 15px;
+}
+
+.title {
+  color: var(--font);
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.text {
+  color: var(--primary);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.rowSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.rowSection > div {
+  width: 50%;
+}
+
+.rowBox {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+}
+
+.rowBox > div {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  min-height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--title);
+  font-size: 16px;
+}
+
+.textConfirm {
+  margin-top: -15px;
+  margin-bottom: 10px;
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}

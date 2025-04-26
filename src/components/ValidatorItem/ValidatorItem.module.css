@@ -1,0 +1,103 @@
+
+.itemView {
+    height: 60px;
+    margin: 16px 16px 0 16px;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    padding: 0 8px;
+    display: flex;
+
+}
+.leftView {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+}
+.innerView {
+    height: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.itemTitle {
+    color: var(--font);
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    flex-shrink: 1;
+    font-weight: 600;
+    max-height: 17px;
+    line-height: 17px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.itemDescription {
+    color: var(--primary);
+    font-size: 13px;
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    line-height: 17px;
+    max-height: 17px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-left: 3px;
+}
+.itemDescriptionTitle {
+    color:  var(--font);
+    font-size: 13px;
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    line-height: 17px;
+}
+.voteTitle {
+    color:  var(--font);
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    font-weight: 600;
+}
+.rightView {
+    width: 140px;
+    height: 50px;
+    background-color: var(--walletItemColor);
+    border-radius: 8px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.buttonStyle {
+    height: 50px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.textInputStyle {
+    width: 80px;
+    height: 30px;
+    color: var(--font);
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    background-color: var(--walletItemColor);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.iconStyle {
+    line-height: 0;
+}
+.iconStyle > svg {
+    stroke: var(--font);
+    fill: var(--backgroundColor);
+    width: 24px;
+    height: 24px;
+}

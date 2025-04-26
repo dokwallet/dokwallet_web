@@ -1,0 +1,51 @@
+.container {
+  margin: auto;
+  width: 100%;
+}
+.formTitle {
+  width: 45%;
+  margin: auto;
+  margin-top: 40px;
+}
+.title {
+  color: var(--font);
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.text {
+  color: var(--primary);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.formInput {
+  width: 50%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.formInput > div {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.button {
+  width: 90%;
+  margin: auto;
+  background-color: var(--background);
+  height: 60px;
+  border-radius: 10px;
+  color: var(--title);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.textConfirm {
+  color: red;
+  font-size: 12px;
+  width: 89%;
+  margin: -5px auto 10px auto;
+}

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleInfo {
+  color: var(--font);
+  font-size: 20px;
+  text-align: center;
+}

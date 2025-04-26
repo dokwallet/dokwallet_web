@@ -1,0 +1,52 @@
+.modalDiv {
+  max-height: 80vh;
+}
+.scrollModalDiv {
+  overflow-y: auto;
+  height: 55vh;
+}
+
+.modalHeader {
+  padding: 15px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+}
+.loader{
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerText {
+  font-size: 16px;
+}
+
+.btnClose {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnClose > svg {
+  fill: var(--font);
+  width: 13px;
+}
+
+.modalBody {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search {
+  background-color: var(--secondaryBackgroundColor);
+  font-size: 18px;
+  padding: 0 10px !important;
+}

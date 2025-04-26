@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.title {
+  color: var(--font);
+  font-size: 28px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.formBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formInput {
+  margin-top: 10px;
+}
+
+.input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.textConfirm {
+  margin-top: 10px;
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.info {
+  color: var(--gray);
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+  align-self: center;
+}
+
+.listTitle {
+  color: var(--gray);
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.button {
+  background-color: var(--background);
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.suggestionWordContainer {
+  background-color: var(--walletItemColor);
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hideSuggestionWordContainer{
+  display: none;
+}
+.wordButtonStyle {
+  background-color: var(--backgroundColor);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 12px;
+  border-width: 1px;
+  border-color: var(--gray);
+  width: max-content;
+  margin-top: 8px;
+}
+.wordButtonText{
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+}
+
+
+.buttonTitle {
+  color: var(--title);
+  font-size: 16px;
+}

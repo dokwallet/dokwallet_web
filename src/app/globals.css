@@ -1,0 +1,274 @@
+/* :root {
+  --background: #f44d03;
+  --font: #000000;
+  --primary: #4d4a49;
+  --backgroundColor: #000;
+  --lightBackground: #f5f5f5;
+  --gray: #999694;
+  --whiteOutline: #e6e2e1;
+  --title: #ffffff;
+  --borderActiveColor: #222;
+  --carouselPoints: rgba(0, 0, 0, 0.2);
+  --secondaryBackgroundColor: #ffffff;
+  --fontSecondary: #000000;
+  --headerBorder: #b7b7b7;
+  --sidebarIcon: #989898;
+  --backdrop: rgba(0, 0, 0, 0.5);
+  --walletItemColor: #efedf4;
+  --toastBackground: #232441;
+  --progressBottom: #2650f4;
+  --leftToastBackground: #191b26;
+  --successBottom: #71c441;
+  --blue: #006ee6;
+
+  --cubic-bezier: 0.25, 0.1, 0.25, 1;
+  --max-width: 1100px;
+  --border-radius: 12px;
+
+} */
+
+:root[data-theme='light'] {
+  --background: #f44d03;
+  --font: #000000;
+  --primary: #4d4a49;
+  --backgroundColor: #fff;
+  --lightBackground: #f5f5f5;
+  --disabledItem: #dddddd;
+  --gray: #999694;
+  --whiteOutline: #e6e2e1;
+  --title: #ffffff;
+  --borderActiveColor: #222;
+  --carouselPoints: rgba(0, 0, 0, 0.2);
+  --secondaryBackgroundColor: #ffffff;
+  --fontSecondary: #000000;
+  --headerBorder: #b7b7b7;
+  --sidebarIcon: #989898;
+  --backdrop: rgba(0, 0, 0, 0.5);
+  --walletItemColor: #efedf4;
+  --toastBackground: #232441;
+  --progressBottom: #2650f4;
+  --leftToastBackground: #191b26;
+  --successBottom: #71c441;
+  --blue: #006ee6;
+  --leftMsgBg: #ececec;
+  --rightMsgBg: #579ffb;
+  --leftReplyBg: #22222231;
+  --rightReplyBg: #ffffff31;
+  --replyContainerBg: #ffffff31;
+
+  --cubic-bezier: 0.25, 0.1, 0.25, 1;
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-roboto: var(--font-roboto);
+}
+
+:root[data-theme='dark'] {
+  --background: #f44d03;
+  --font: #e0e0e0;
+  --primary: #ffffff;
+  --lightBackground: #333333;
+  --disabledItem: #111111;
+  --backgroundColor: #232323;
+  --gray: #999694;
+  --whiteOutline: #484848;
+  --title: #ffffff;
+  --borderActiveColor: #ffffff;
+  --carouselPoints: #ffffff;
+  --secondaryBackgroundColor: #333130;
+  --fontSecondary: #000000;
+  --headerBorder: #b7b7b7;
+  --sidebarIcon: #ffffff;
+  --backdrop: rgba(255, 255, 255, 0.1);
+  --walletItemColor: #151517;
+  --toastBackground: #232441;
+  --progressBottom: #2650f4;
+  --leftToastBackground: #191b26;
+  --successBottom: #71c441;
+  --blue: #006ee6;
+  --leftMsgBg: #ececec;
+  --rightMsgBg: #579ffb;
+  --leftReplyBg: #22222231;
+  --rightReplyBg: #ffffff31;
+  --replyContainerBg: #ffffff31;
+
+  --cubic-bezier: 0.25, 0.1, 0.25, 1;
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-roboto: var(--font-roboto);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-family: var(--font-roboto);
+  /* overflow-x: hidden; */
+  line-height: 1.5;
+}
+
+body {
+  color: var(--font);
+  background-color: var(--backgroundColor);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input {
+  list-style: none;
+  border: none;
+  background: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+svg {
+  fill: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.MuiBox-root:focus {
+  outline: none;
+}
+
+.MuiCheckbox-root {
+  color: var(--sidebarIcon) !important;
+}
+
+.MuiCheckbox-root.Mui-checked {
+  color: #f44d03 !important;
+}
+
+.MuiOutlinedInput-root {
+  color: var(--borderActiveColor) !important;
+}
+
+.MuiInput-root:before {
+  border-bottom: 1px solid var(--borderActiveColor) !important;
+}
+.MuiInput-root:after {
+  border-bottom: 2px solid var(--borderActiveColor) !important;
+}
+
+.MuiInput-root {
+  color: var(--borderActiveColor) !important;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --title: var(--title, #000000);
+  }
+}  */
+
+.MuiList-root {
+  background-color: var(--lightBackground);
+}
+
+/* ///////scrollbar/////////////// */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--borderActiveColor);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f44d03;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondaryBackgroundColor);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--secondaryBackgroundColor);
+}
+
+/* /////carousel //////////// */
+
+.carousel .control-arrow {
+  display: none;
+}
+
+.carousel .carousel-status {
+  display: none;
+}
+
+/* toastify.css */
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: green; /* Change to your desired color */
+}
+
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: red; /* Change to your desired color */
+}
+
+.Toastify__toast--warning .Toastify__toast-icon svg {
+  fill: orange; /* Change to your desired color */
+}
+
+.Toastify__toast--info .Toastify__toast-icon svg {
+  fill: blue; /* Change to your desired color */
+}

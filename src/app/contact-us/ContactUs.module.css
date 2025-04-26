@@ -1,0 +1,57 @@
+.container {
+    flex: 1;
+    background-color: var(--backgroundColor);
+}
+
+.contentContainerStyle {
+    background-color: var(--backgroundColor);
+    padding: 20px;
+}
+
+.mainImageStyle {
+    height: 80px;
+    align-self: 'center';
+}
+
+.button {
+    background-color: var(--background);
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 30px;
+}
+
+.buttonTitle {
+    color: var(--title);
+    font-size: 16px;
+}
+
+.title {
+    color: var(--font);
+    font-size: 16px;
+    margin: 20px 24px;
+}
+
+.descriptions {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 30px 20px 0 0;
+    text-align: center;
+}
+
+.borderView {
+    height: 1.5px;
+    background-color: var(--gray);
+    width: 100%;
+    margin: 24px 0;
+    align-self: center;
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

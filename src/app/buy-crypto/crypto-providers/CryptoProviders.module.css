@@ -1,0 +1,194 @@
+.goBack {
+  margin: 20px;
+}
+
+.container {
+ padding:20px;
+}
+.dropdownContainer {
+  width: 100%;
+  border: 1px solid #989898;
+  border-radius: 4px;
+}
+
+.textStyle {
+  color: var(--primary);
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.address {
+  color: var(--font);
+  font-size: 14px;
+}
+.addressView{
+  margin-top: 16px;
+}
+.flex1{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.rowView{
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.addCoinRowView {
+  margin-top: 16px;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  font-size: 14px;
+  color: var(--gray);
+}
+.highlightText{
+  font-size: 14px;
+  color: var(--background);
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.fiatCurrencyPicker {
+  width:65px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: var(--sidebarIcon);
+  margin-right: 12px;
+  height: 56px;
+}
+.textConfirm {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  min-height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--title);
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.btnList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn {
+  width: 100%;
+  text-align: left;
+  background-color: var(--backgroundColor);
+  height: 60px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-bottom: 1px solid var(--whiteOutline);
+}
+
+.btnBox {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.btnTitle {
+  color: var(--font);
+  font-size: 14px;
+}
+
+.btnCoins {
+  color: var(--background);
+  font-size: 12px;
+}
+
+.imageBox {
+  width: 40px;
+  height: 40px;
+  color: var(--backgroundColor);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid var(--borderActiveColor);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid var(--gray);
+  width: 100%;
+}
+
+.iconBox {
+  width: 39px;
+  height: 39px;
+  background-color: var(--font);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.iconBox > svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--backgroundColor);
+}
+
+.items {
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.title {
+  color: var(--font);
+  font-size: 14px;
+}
+
+.chainDisplayName {
+  margin-left: 5px;
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  border-radius: 10px;
+  background-color: var(--walletItemColor);
+  text-align: center;
+  padding: 0 10px;
+}

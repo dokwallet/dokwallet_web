@@ -1,0 +1,47 @@
+.infoList {
+  padding: 20px;
+  /* width: 60%;
+  height: calc(50vh - 60px); */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.titleInfo {
+  color: var(--font);
+  font-size: 20px;
+  text-align: center;
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.info {
+  color: var(--font);
+  font-size: 16px;
+  text-align: center;
+}
+
+.btnList {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--gray);
+}
+
+.learnBorder {
+  border-right: 1px solid var(--gray);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.learnBox {
+  height: 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.learnText {
+  color: var(--background);
+  font-size: 17px;
+}

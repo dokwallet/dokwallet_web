@@ -1,0 +1,113 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--app-height) - 110px);
+  padding: 20px;
+}
+
+.carouselSection {
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.caruselList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.box {
+  margin: 0 auto;
+}
+
+.box > svg {
+  fill: var(--background);
+}
+
+.header {
+  margin: 20px auto 0 auto;
+}
+
+.title {
+  color: var(--font);
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 34px;
+  }
+}
+
+.body {
+  color: var(--primary);
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paginationDotsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inactiveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--carouselPoints);
+  margin: 0 5px;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--background);
+  margin: 0 5px;
+}
+
+.btn {
+  font-weight: bold;
+  color: var(--carouselPoints);
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--background);
+  color: var(--title);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 50%;
+  }
+}

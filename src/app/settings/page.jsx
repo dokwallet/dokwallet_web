@@ -1,0 +1,274 @@
+'use client';
+import React, {useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {
+  getLocalCurrency,
+  getLockTimeDisplay,
+  isChatOptions,
+  isFeesOptions,
+} from 'dok-wallet-blockchain-networks/redux/settings/settingsSelectors';
+import {
+  updateChatOptions,
+  updateFeesOptions,
+  updateFingerprint,
+} from 'dok-wallet-blockchain-networks/redux/settings/settingsSlice';
+import {fingerprintAuthOut} from 'dok-wallet-blockchain-networks/redux/auth/authSlice';
+import s from './Settings.module.css';
+
+const icons = require(`assets/images/settings`).default;
+const AllIcons = require(`assets/images/icons`).default;
+import Link from 'next/link';
+import {FormControlLabel, Radio, RadioGroup, Switch} from '@mui/material';
+import {Password, Security} from '@mui/icons-material';
+import ModalConfirmEnableChatModal from 'components/ModalConfirmEnableChatModal';
+import {useLocale, useTranslations} from 'next-intl';
+import {setUserLocale} from 'src/utils/updateLocale';
+
+const Settings = ({navigation}) => {
+  const [isChatModalVisible, setIsChatModalVisible] = useState(false);
+  const dispatch = useDispatch();
+  // const [isFingerprintEnabled, setIsFingerprintEnabled] = useState(false);
+  const localCurrency = useSelector(getLocalCurrency);
+  const lockTimeDisplay = useSelector(getLockTimeDisplay);
+  const feesOptions = useSelector(isFeesOptions);
+  const chatOptions = useSelector(isChatOptions);
+  const currentLocale = useLocale();
+  const t = useTranslations('settings');
+
+  const locales = [
+    {
+      label: 'English',
+      value: 'en',
+    },
+    {
+      label: 'Hebrew',
+      value: 'he',
+    },
+  ];
+
+  const onChangeLocale = e => {
+    setUserLocale(e.target.value);
+  };
+
+  const onChangeFeesOptions = e => {
+    dispatch(updateFeesOptions(e.target.checked));
+  };
+
+  const onChangeChatOptions = e => {
+    const value = e?.target.checked;
+    if (value) {
+      setIsChatModalVisible(true);
+    } else {
+      dispatch(updateChatOptions(value));
+    }
+  };
+
+  return (
+    <div className={s.container}>
+      <div className={s.list}>
+        <p className={s.title}>Account settings</p>
+        <Link href='/settings/local-currency' className={s.btn}>
+          {icons.localCurrency}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('localCurrency')}</p>
+            <p className={s.btnText}>{localCurrency}</p>
+          </div>
+        </Link>
+        {/* /////////////////////////////// */}
+        <Link href='/manage-coins' className={s.btn}>
+          {icons.setCurrency}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('coinList')}</p>
+            <p className={s.btnText}>Manage your coin list</p>
+          </div>
+        </Link>
+        <Link href='/settings/display-theme' className={s.btn}>
+          {icons.setCurrency}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('theme')}</p>
+            <p className={s.btnText}>Manage your app theme</p>
+          </div>
+        </Link>
+        {/* /////////////////////////////// */}
+        {/*<p className={s.title}>Notifications settings</p>*/}
+        {/*<Link href='/settings/notifications' className={s.btn}>*/}
+        {/*  {icons.notifications}*/}
+        {/*  <div className={s.box}>*/}
+        {/*    <p className={s.btnTitle}>Push Notifications</p>*/}
+        {/*    <p className={s.btnText}>Manage push notifications</p>*/}
+        {/*  </div>*/}
+        {/*</Link>*/}
+        {/* /////////////////////////////// */}
+        <p className={s.title}>Security</p>
+        <Link href='/settings/change-password' className={s.btn}>
+          <Password />
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('changePassword')}</p>
+            <p className={s.btnText}>Change or reset your password</p>
+          </div>
+        </Link>
+        <Link href='/settings/autolock' className={s.btn}>
+          {icons.change}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('autoLock')}</p>
+            <p className={s.btnText}>{lockTimeDisplay}</p>
+          </div>
+        </Link>
+        {/* /////////////////////////////// */}
+        <Link href='/verify/verify-login' className={s.btn}>
+          {icons.showPhrase}
+
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('showSeedPhrase')}</p>
+            <p className={s.btnText}>Manage your seed phrase</p>
+          </div>
+        </Link>
+        {/* /////////////////////////////// */}
+        {/* <div
+          className={s.btn}
+          style={{ justifyContent: "space-between" }}
+          href=      >
+          <div className={{ flexDirection: "row", alignItems: "center" }}>
+            <Change width="24" height="22" fill={theme.font} />
+            <div className={s.box}>
+              <p className={s.btnTitle}>Login with Fingerprint</p>
+              <p className={s.btnText}>
+                {isSwitchOn === false ? "No set" : "Set"}
+              </p>
+            </div>
+          </div>
+          <Switch
+            value={isSwitchOn}
+            onValueChange={onToggleSwitch}
+            trackColor={{ false: "gray", true: "#E8E8E8" }}
+            thumbColor={isSwitchOn ? "#F44D03" : "white"}
+            ios_backgroundColor="#E8E8E8"
+          />
+        </div> */}
+
+        {/* /////////////////////////////// */}
+        <p className={s.title}>General</p>
+        {/*<button className={s.btn}>*/}
+        {/*  {icons.rate}*/}
+
+        {/*  <div className={s.box}>*/}
+        {/*    <p className={s.btnTitle}>Rate our App</p>*/}
+        {/*    <p className={s.btnText}>Rate & Review us</p>*/}
+        {/*  </div>*/}
+        {/*</button>*/}
+        {/* /////////////////////////////// */}
+        <div className={s.btn}>
+          {icons.changeLanguage}
+          <div className={s.box}>
+            <p className={s.btnTitle}>Change Language</p>
+            <div>
+              <RadioGroup value={currentLocale} onChange={onChangeLocale} row>
+                {locales.map(locale => (
+                  <FormControlLabel
+                    key={locale.value}
+                    value={locale.value}
+                    control={<Radio color='warning' />}
+                    label={locale.label}
+                  />
+                ))}
+              </RadioGroup>
+            </div>
+          </div>
+        </div>
+        <Link href='/about/terms-conditions' className={s.btn}>
+          {icons.mail}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('termsAndConditions')}</p>
+          </div>
+        </Link>
+        {/* /////////////////////////////// */}
+        <Link href='/about/privacy-policy' className={s.btn}>
+          {icons.privacy}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{t('privacyPolicy')}</p>
+          </div>
+        </Link>
+        <p className={s.title}>Wallet Settings</p>
+        <Link href='/settings/derive-address' className={s.btn}>
+          {icons.setCurrency}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{'EVM, SOL & TRX addresses'}</p>
+            <p className={s.btnText}>
+              {'Manage multiple addresses for EVM, SOL and TRX'}
+            </p>
+          </div>
+        </Link>
+        <div className={s.btn}>
+          {icons.setCurrency}
+          <div className={s.box}>
+            <div className={s.subBox}>
+              <p className={s.btnTitle}>{'EVM Fees Options'}</p>
+              <p className={s.btnText}>
+                {'It will show the fees options for supported EVM chains'}
+              </p>
+            </div>
+            <Switch
+              checked={feesOptions}
+              defaultChecked={feesOptions}
+              onChange={onChangeFeesOptions}
+              color='warning'
+            />
+          </div>
+        </div>
+        <div className={s.btn}>
+          {AllIcons.chatIcon}
+          <div className={s.box}>
+            <div className={s.subBox}>
+              <p className={s.btnTitle}>{'Blockchain Chat'}</p>
+              <p className={s.btnText}>
+                {'Messaging services with ethereum address'}
+              </p>
+            </div>
+            <Switch
+              checked={chatOptions}
+              defaultChecked={chatOptions}
+              onChange={onChangeChatOptions}
+              color='warning'
+            />
+          </div>
+        </div>
+        <Link href='/settings/chat-blocked' className={s.btn}>
+          {AllIcons.blockedIcon}
+          <div className={s.box}>
+            <p className={s.btnTitle}>{'Blockchain Chat Blocked'}</p>
+            <p className={s.btnText}>
+              {' Manage blocked addresses for blockchain chat'}
+            </p>
+          </div>
+        </Link>
+        <Link href={'/settings/privacy-mode'} className={s.btn}>
+          <Security />
+          <div className={s.box}>
+            <p className={s.btnTitle}>{'Privacy Mode'}</p>
+            <p className={s.btnText}>
+              {'Enhance privacy by auto-resetting addresses on app restart'}
+            </p>
+          </div>
+        </Link>
+      </div>
+      <ModalConfirmEnableChatModal
+        visible={isChatModalVisible}
+        hideModal={isYesClicked => {
+          setIsChatModalVisible(false);
+          dispatch(updateChatOptions(!!isYesClicked));
+        }}
+      />
+      {/* <ModalFingerprint
+        visible={showModalVarify}
+        hideModal={setShowModalVarify}
+        navigation={navigation}
+      />
+      <ModalFingerprintVerification
+        visible={showModalPass}
+        hideModal={setShowModalPass}
+      /> */}
+    </div>
+  );
+};
+
+export default Settings;

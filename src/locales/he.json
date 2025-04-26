@@ -1,0 +1,26 @@
+{
+  "home": {
+    "home": "מסך הבית",
+    "buyCrypto": "קנה קריפטו",
+    "swap": "החלפת קריפטו",
+    "sellCrypto": "מכירת קריפטו",
+    "wallets": "ארנקים",
+    "about": "עלינו",
+    "contactUs": "צור קשר",
+    "settings": "הגדרות",
+    "receivePaymentUrl": "יצירת דרישת תשלום",
+    "resetWallet": "אתחול",
+    "walletConnect": "Wallet Connect",
+    "logout": "יציאה"
+  },
+  "settings": {
+    "localCurrency": "מטבע מקומי",
+    "coinList": "רשימת מטבעות",
+    "theme": "עיצוב",
+    "changePassword": "שנה סיסמה",
+    "autoLock": "נעילה אוטומטית",
+    "showSeedPhrase": "הצגת המפתח הפרטי של הארנק",
+    "termsAndConditions": "תנאי שימוש",
+    "privacyPolicy": "תנאי פרטיות"
+  }
+}

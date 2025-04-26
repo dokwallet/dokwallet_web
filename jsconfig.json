@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"],
+      "dok-wallet-blockchain-networks/*": ["./dok-wallet-blockchain-networks/*"],
+      "app/*": ["./src/app/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "data/*": ["./src/data/*"],
+      "pages/*": ["./src/pages/*"],
+      "redux/*": ["./src/redux/*"],
+      "whitelabel/*": ["./src/whitelabel/*"],
+      "utils/*": ["./src/utils/*"],
+      "myWallet/*": ["./src/myWallet/*"],
+      "theme/*": ["./src/theme/*"]
+    }
+  }
+}
+

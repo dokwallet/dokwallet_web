@@ -1,0 +1,90 @@
+
+.infoContainer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.info {
+  color: red;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.infoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoIcon > svg {
+  width: 20px;
+  height: 20px;
+  fill: red;
+}
+
+.formView{
+  width: 100%;
+  padding: 20px;
+}
+
+.errorText {
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  min-height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title);
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+
+.box {
+  background-color: var(--whiteOutline);
+  padding: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.itemView {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.boxBalance {
+  color: var(--gray);
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.formInput {
+  width: 100%; /* Замініть на потрібний розмір */
+  flex: 1;
+}
+
+.title {
+  color: var(--font);
+  font-size: 16px;
+  text-align: left;
+}

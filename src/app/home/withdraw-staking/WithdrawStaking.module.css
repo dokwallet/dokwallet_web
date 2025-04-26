@@ -1,0 +1,164 @@
+.container {
+  flex: 1;
+  background-color: var(--backgroundColor);
+  align-items: center;
+}
+
+.contentContainerStyle {
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--backgroundColor);
+}
+
+.title {
+  color: var(--gray);
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 5;
+}
+
+.box {
+  display: flex;
+  gap: 6px;
+}
+
+.boxTitle {
+  color: var(--font);
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.boxBalance {
+  color: var(--gray);
+  font-size: 18px;
+  text-align: left;
+}
+
+.formInput {
+  width: 100%;
+  flex: 1;
+}
+
+.boxInput {
+  margin-top: 10px;
+}
+
+.inputView {
+  background-color: var(--secondaryBackgroundColor);
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.input {
+  height: 50px;
+  width: 100%;
+}
+
+.btnMax {
+  background-color: var(--background);
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  border-color: var(--background);
+  color: var(--backgroundColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btnText {
+  color: var(--backgroundColor);
+  font-size: 12px;
+}
+
+.scan {
+  background-color: var(--font);
+}
+
+.textConfirm {
+  color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.listTitle {
+  color: var(--font);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.addressView {
+  border: solid 1px var(--whiteOutline);
+  border-radius: 6px;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+}
+
+
+.blockList {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.blockTitle {
+  color: var(--font);
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.boxText {
+  color: var(--font);
+  font-size: 18px;
+  text-align: right;
+}
+
+.switchList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  margin-bottom: 10px;
+}
+
+.switchText {
+  color: var(--font);
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.button {
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.buttonTitle {
+  color: var(--title);
+  font-size: 18px;
+}
+
+.nextContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.selectInput {
+  height: 50px;
+}

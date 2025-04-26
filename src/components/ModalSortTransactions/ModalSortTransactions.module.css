@@ -1,0 +1,96 @@
+.section {
+  padding: 0 5px;
+  /* display: flex;
+  flex: 1;
+  justify-content: center; */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.headerBox {
+  width: 160px;
+}
+
+.title {
+  color: #ccc;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 12px;
+}
+
+.titleItem {
+  color: #ccc;
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.btn {
+  background-color: var(--headerBorder);
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.btnTitle {
+  color: var(--title);
+  font-size: 16px;
+}
+
+.item {
+  color: var(--font);
+  font-size: 14px;
+}
+
+.itembox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btnSubmit {
+  background-color: var(--background);
+  width: 100%; /* Ви можете змінити цю ширину на вашу потребу */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  align-self: center;
+  margin-top: 10px;
+}
+.clearCache {
+  background-color: transparent;
+  border: 1px solid var(--background);
+  width: 100%; /* Ви можете змінити цю ширину на вашу потребу */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.btnSubmitTitle {
+  color: var(--title);
+  font-size: 16px;
+}
+
+.btnClearTitle {
+  color: var(--font);
+  font-size: 16px;
+}
+.Box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}

@@ -1,0 +1,76 @@
+.flex1 {
+  flex: 1;
+}
+
+.rowView {
+  border-bottom: 0.5px solid var(--gray);
+  padding: 8px 8px 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.subRowView {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-right: 8px;
+  width: 100%;
+}
+
+.rightRowView {
+  display: flex;
+  align-items: center;
+}
+
+.imageStyle {
+  height: 40px;
+  width: 40px;
+  margin-right: 12px;
+  border-radius: 40px;
+}
+
+.titleItem {
+  color: var(--font);
+  font-size: 15px;
+  flex-shrink: 1;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.statusText {
+  color: var(--background);
+  font-size: 14px;
+  flex-shrink: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.balanceStyle {
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  fill: var(--gray);
+  margin-left: 5px;
+}
+
+.fiatStyle {
+  color: var(--primary);
+  font-size: 15px;
+  text-align: right;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.remaningTime {
+  color: var(--gray);
+  font-size: 12px;
+  font-weight: 500;
+}

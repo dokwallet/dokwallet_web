@@ -1,0 +1,14 @@
+.mainView {
+  padding: 10px;
+  position: absolute;
+  align-self: center;
+  bottom: 80px;
+  padding-bottom: 12px;
+  background-color: var(--background);
+  border-radius: 4px;
+  z-index: 11;
+  color: var(--backgroundColor);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,130 @@
+/*:root {*/
+/*  --app-height: 100%;*/
+/*}*/
+
+.container {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .container {
+    display: block;
+    width: 200px;
+    border-right: solid 1px var(--whiteOutline);
+    overflow-y: auto;
+    padding-left: 15px;
+    height: calc(var(--app-height) - 70px);
+  }
+}
+
+/* Position and sizing of burger button */
+
+.bmBurgerButton {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .bmBurgerButton {
+    display: block;
+    top: 22px;
+    left: 21px;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bmBurgerBars {
+  background: var(--gray);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bmBurgerBars:hover {
+  background: var(--gray);
+}
+
+/* Position and sizing of clickable cross button */
+.bmCrossButton {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bmCross {
+  background: var(--background);
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+/* .bmMenuWrap {
+  position: fixed;
+  height: 100%;
+} */
+
+/* General sidebar styles */
+.bmMenu {
+  background: var(--backgroundColor);
+  /* padding: 2.5em 1.5em 0; */
+  font-size: 15px;
+  padding: 15px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+/* .bmMorphShape {
+  fill: #373a47;
+} */
+
+/* Wrapper for item list */
+/* .bmItemList {
+  color: #daca21;
+
+} */
+
+/* Individual item */
+.bmItem {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bmOverlay {
+  background: var(--backdrop);
+}
+
+/* Sub-menu*/
+.btnMenu,
+.btnMenuAccent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  list-style: 1.17;
+  width: 100%;
+  height: 60px;
+  border: 0px;
+  color: var(--mb-dropbox-font-color);
+  /* outline: 1px solid rgb(13, 64, 64); */
+}
+.btnMenuAccent {
+  color: var(--font-accent-color);
+  background-color: var(--navigation-accent-hover);
+}
+
+.arrowContainer {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: -30px;
+  top: -3px;
+  width: 20px;
+  transition: all 0.2s ease;
+}
+
+.arrowUp {
+  transform: rotateZ(180deg);
+}

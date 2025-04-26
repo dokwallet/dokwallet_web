@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--backgroundColor);
+  padding: 20px 15px;
+  height: var(--app-height);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.titleContainer {
+  /* width: calc(100% - 30px); */
+  margin-top: 20px;
+}
+
+.title {
+  margin-left: 30px;
+  color: var(--font);
+  font-size: 24px;
+}
+
+.mainContainer {
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--gray);
+}

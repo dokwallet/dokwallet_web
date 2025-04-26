@@ -1,0 +1,17 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appID": "9HJ6G8C9BU.com.dok.wallet",
+             "paths": ["/home/send/send-funds/*"],
+              "components": [
+                     {
+                         "/": "/home/send/send-funds/*",
+                         "?": "*"
+                     }
+                ]
+           }
+       ]
+   }
+}

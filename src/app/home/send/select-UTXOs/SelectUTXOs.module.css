@@ -1,0 +1,109 @@
+.container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+}
+
+.goBack {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentContainerStyle {
+  padding: 20px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+  width: 100%;
+  max-height: calc(100vh - 280px);
+}
+
+.subContainer {
+  max-height: calc(100vh - 280px);
+  overflow: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.extraElementContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Замініть на потрібний розмір */
+  margin: 20px 0 20px 0;
+}
+
+.buttonAdd50 {
+  width: fit-content;
+  background-color: var(--background);
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title);
+}
+
+.subItem {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.textBold {
+  color: var(--gray);
+  font-size: 16px;
+  font-family: var(--font-roboto);
+  font-weight: 700;
+}
+.text {
+  color: var(--gray);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  text-align: right;
+}
+
+.btn {
+  align-self: center;
+}
+
+.popoverItemView {
+  padding: 16px 24px;
+  background-color: var(--backgroundColor);
+}
+.popoverItemText {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+}

@@ -1,0 +1,48 @@
+.list {
+  /* display: flex; */
+  padding: 20px;
+}
+
+.listfont {
+  color: var(--font);
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.listText {
+  color: var(--font);
+  font-size: 18px;
+}
+
+.listbtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.button {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btnBuy {
+  color: var(--font);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.btnEx {
+  color: var(--font);
+  font-size: 18px;
+}
+
+.shadow {
+  box-shadow: 5px 5px 0 var(--background); /* Ось як ви можете залишити тінь у звичайному CSS. */
+}

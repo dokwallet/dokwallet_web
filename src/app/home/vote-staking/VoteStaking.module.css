@@ -1,0 +1,82 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+}
+.textInputContainer{
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 16px;
+}
+.scrollModalDiv {
+  overflow-y: auto;
+  height: 50vh;
+}
+.flatlistStyle {
+  margin-bottom: 140px;
+}
+.contentContainerStyle {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--backgroundColor);
+  padding-bottom: 20px;
+}
+.itemDescription {
+  color: var(--primary);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+}
+.itemDescriptionTitle {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+}
+.bottomContainer {
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 134px;
+  background-color:var(--backgroundColor);
+}
+.bottomView {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.btnText {
+  color: var(--backgroundColor);
+}
+.button {
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  width: 100%;
+}
+.buttonTitle {
+  color: var(--title);
+  font-size: 18px;
+  font-family: var(--font-roboto);
+}
+.input {
+  background-color: var(--backgroundColor);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.loader{
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,10 @@
+.btn {
+  padding: 5px 20px;
+}
+
+.btn > svg {
+  fill: var(--font);
+  display: block;
+  height: 24px;
+  width: 24px;
+}

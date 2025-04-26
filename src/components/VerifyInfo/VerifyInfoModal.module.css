@@ -1,0 +1,103 @@
+.container {
+  padding: 10px;
+  /* overflow-y: auto;
+  max-height: 90vh; */
+}
+
+.icon {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon > svg {
+  fill: var(--backgroundColor);
+}
+
+.title {
+  color: var(--font);
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.infoList {
+  width: 100%;
+}
+
+.info {
+  color: var(--gray);
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.span {
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.infoNext {
+  color: var(--gray);
+  font-size: 15px;
+  text-align: left;
+}
+
+.learnText {
+  color: var(--background);
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.infoRed {
+  color: red;
+  font-size: 15px;
+  text-align: left;
+}
+
+.spanRed {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btnList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnVerify {
+  width: 100%;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: transparent;
+  color: var(--title);
+  font-size: 16px;
+}
+
+.btnLater {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: var(--backgroundColor);
+  font-size: 16px;
+}

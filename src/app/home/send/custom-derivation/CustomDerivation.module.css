@@ -1,0 +1,235 @@
+.container {
+  background-color: var(--backgroundColor);
+  max-height: calc(var(--app-height) - 70px);
+  overflow-y: auto !important;
+  position: relative;
+  width: 100%;
+}
+
+.goBack {
+  padding:20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.section {
+  width: 100%;
+}
+
+
+.dropdownContainer {
+  width: 100%;
+  margin-bottom: 24px;
+  border: 1px solid #989898;
+  border-radius: 4px;
+}
+.inputContainer {
+  padding:0px 20px 20px 20px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  background-color: var(--backgroundColor);
+  padding-bottom: 0;
+  font-weight: bold;
+  color: var(--font);
+  flex:1;
+  margin-bottom: 24px;
+}
+
+.textConfirm {
+  color: red;
+  font-size: 12px;
+  width: 89%;
+  margin-top: 4px;
+}
+.hideModule{
+  display: none;
+}
+
+.button {
+  width: 100%;
+  background-color: var(--background);
+  min-height: 60px;
+
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title);
+}
+
+.buttonAdd50 {
+  width: fit-content;
+  background-color: var(--background);
+  min-height: 40px;
+  padding:  0 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--title);
+}
+
+.exportButton {
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--font);
+  min-height: 50px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font);
+}
+.exportButton:hover {
+  border: 2px solid var(--background);
+  color: var(--background)
+}
+
+.deriveAddressHeader {
+  padding: 0 20px 0 20px;
+  height: 70px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--font);
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: var(--backgroundColor);
+}
+
+.deriveAddressTitle {
+  color: var(--font);
+  font-size: 16px;
+  margin-top: 4px;
+  font-family: var(--font-roboto);
+  font-weight: bold;
+}
+.mainItem {
+  align-items: center;
+  flex-direction: row;
+  height: 52px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  flex: 1;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.rowStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 24px;
+}
+
+.item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemNumber {
+  align-items: flex-end;
+}
+
+.title {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+}
+
+.text {
+  color: var(--gray);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  text-align: right;
+}
+
+.iconBox {
+  width: 39px;
+  height: 39px;
+  background-color: var(--font);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.iconBox > svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--backgroundColor);
+}
+
+.arrow > svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--gray);
+}
+
+.btn {
+  align-self: center;
+}
+
+.chainDisplayName {
+  margin-left: 5px;
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  flex-shrink: 1;
+  border-radius: 10px;
+  background-color: var(--walletItemColor);
+  text-align: center;
+  padding: 0 10px;
+}
+.popoverItemView {
+  padding: 16px 24px;
+  background-color: var(--backgroundColor);
+}
+.popoverItemText {
+  color: var(--font);
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 600;
+}
+.itemContainer {
+  padding-top:20px
+}
+.sticky {
+  position: fixed;
+  top: 70px;
+  max-width: 900px;
+  width: 900px;
+}
+
+.sticky + .itemContainer {
+  padding-top: 70px;
+}

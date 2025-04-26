@@ -1,0 +1,26 @@
+{
+  "home": {
+    "home": "Home",
+    "buyCrypto": "Buy Crypto",
+    "swap": "Swap",
+    "sellCrypto": "Sell Crypto",
+    "wallets": "Wallets",
+    "about": "About",
+    "contactUs": "Contact Us",
+    "settings": "Settings",
+    "receivePaymentUrl": "Receive Payment URL",
+    "resetWallet": "Reset Wallet",
+    "walletConnect": "Wallet Connect",
+    "logout": "Logout"
+  },
+  "settings": {
+    "localCurrency": "Local Currency",
+    "coinList": "Coin List",
+    "theme": "Theme",
+    "changePassword": "Change password",
+    "autoLock": "Auto Lock",
+    "showSeedPhrase": "Show seed phrase",
+    "termsAndConditions": "Terms & Conditions",
+    "privacyPolicy": "Privacy policy"
+  }
+}
