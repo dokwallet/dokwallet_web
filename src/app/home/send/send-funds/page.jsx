@@ -117,12 +117,24 @@ const SendFunds = () => {
         });
         return;
       }
-      if (currentCoin.chain_name === 'cardano' && amount.lt(new BigNumber(1))) {
-        formikRef?.current?.setFieldError(
-          'amount',
-          'minimum 1 ADA is required for transaction',
-        );
-        return;
+      if (currentCoin.chain_name === 'cardano') {
+        if (amount.lt(new BigNumber(1))) {
+          formikRef?.current?.setFieldError(
+            'amount',
+            'minimum 1 ADA is required for transaction',
+          );
+          return;
+        }
+        if (
+          !amount.eq(availableAmountBN) &&
+          availableAmountBN.minus(amount).lt(new BigNumber(1))
+        ) {
+          formikRef?.current?.setFieldError(
+            'amount',
+            'Remaining balance is less than 1 ADA, please send max amount',
+          );
+          return;
+        }
       }
     }
     if (new BigNumber(values.amount).gt(availableAmount)) {
