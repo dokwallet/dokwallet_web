@@ -8,7 +8,6 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import {getWhiteLabelInfo} from 'dok-wallet-blockchain-networks/service/dokApi';
 import {headers} from 'next/headers';
-import {setWhiteLabelInfo} from 'whitelabel/whiteLabelInfo';
 import {isLocaleSet} from 'utils/updateLocale';
 
 const roboto = Roboto({
@@ -30,7 +29,6 @@ export default async function RootLayout({children}) {
     const firstHost = host.split(':')[0];
     const resp = await getWhiteLabelInfo(firstHost);
     wlData = resp?.data;
-    setWhiteLabelInfo(wlData);
   } catch (error) {
     console.error('Error in getting white label:', error);
   }
