@@ -35,13 +35,12 @@ export default async function RootLayout({children}) {
 
   try {
     const isLocalExist = await isLocaleSet();
-    console.log('isLocalExist', isLocalExist);
     if (isLocalExist) {
       locale = await getLocale();
     } else {
       locale = wlData?.defaultLocale || 'en';
     }
-    messages = await getMessages();
+    messages = await getMessages({locale});
   } catch (error) {
     console.error('Error loading locale or messages:', error);
     locale = 'en';
