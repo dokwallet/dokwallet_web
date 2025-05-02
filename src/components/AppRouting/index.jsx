@@ -178,7 +178,7 @@ function AppRouting({children, wlData}) {
       try {
         const localeSetCheck = await isLocaleSet();
         if (!localeSetCheck) {
-          setUserLocale(resp?.data?.defaultLocale || 'en');
+          setUserLocale(wlData.defaultLocale || 'en');
         }
       } catch {
         console.error('error in set local', e);
