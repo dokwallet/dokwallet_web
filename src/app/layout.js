@@ -25,7 +25,7 @@ export default async function RootLayout({children}) {
 
   try {
     const headersList = await headers();
-    const host = headersList.get('host');
+    const host = headersList.get('x-forwarded-host') ?? headersList.get('host');
     const firstHost = host.split(':')[0];
     const resp = await getWhiteLabelInfo(firstHost);
     wlData = resp?.data;
