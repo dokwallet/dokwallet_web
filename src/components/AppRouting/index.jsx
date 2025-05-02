@@ -64,6 +64,7 @@ function AppRouting({children}) {
     useState(true);
   const disableMessage = useSelector(getDisableMessage);
   const googleAnalyticsKey = useSelector(getGoogleAnalyticsKey);
+  const googleSiteVerification = useSelector(getGoogleSiteVerification);
 
   useEffect(() => {
     if (googleAnalyticsKey) {
@@ -196,6 +197,13 @@ function AppRouting({children}) {
   return (
     <>
       <div>
+        {typeof googleSiteVerification !== 'string' &&
+          !!googleSiteVerification && (
+            <meta
+              name='google-site-verification'
+              content={googleSiteVerification}
+            />
+          )}
         {rountingDone && !disableMessage ? (
           <div className={s.container}>
             <div className={s.navbarWrapper}>{<Header />}</div>
