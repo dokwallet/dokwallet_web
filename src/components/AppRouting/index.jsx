@@ -35,6 +35,7 @@ import {
 import {
   getDisableMessage,
   getGoogleAnalyticsKey,
+  getGoogleSiteVerification,
 } from 'dok-wallet-blockchain-networks/redux/cryptoProviders/cryptoProvidersSelectors';
 import DisabledView from 'components/DisabledView';
 import {MainNavigation} from 'utils/navigation';
@@ -46,6 +47,7 @@ import {
 } from 'dok-wallet-blockchain-networks/redux/wallets/walletsSlice';
 import {isLocaleSet, setUserLocale} from 'src/utils/updateLocale';
 import {masterClickHost, publicRoutes} from 'utils/common';
+import Head from 'next/head';
 
 function AppRouting({children}) {
   const password = useSelector(getUserPassword);
@@ -197,12 +199,14 @@ function AppRouting({children}) {
   return (
     <>
       <div>
-        {typeof googleSiteVerification !== 'string' &&
+        {typeof googleSiteVerification === 'string' &&
           !!googleSiteVerification && (
-            <meta
-              name='google-site-verification'
-              content={googleSiteVerification}
-            />
+            <Head>
+              <meta
+                name='google-site-verification'
+                content={googleSiteVerification}
+              />
+            </Head>
           )}
         {rountingDone && !disableMessage ? (
           <div className={s.container}>
