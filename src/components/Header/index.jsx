@@ -3,12 +3,7 @@
 import Link from 'next/link';
 import s from './Header.module.css';
 
-import {
-  getAppTitle,
-  getAppIcon,
-  getAppAssets,
-  getAppLogo,
-} from 'whitelabel/whiteLabelInfo';
+import {getAppLogo} from 'whitelabel/whiteLabelInfo';
 const icons = require(`assets/images/icons`).default;
 import React, {useContext, useEffect} from 'react';
 import {ThemeContext} from 'theme/ThemeContext';
@@ -20,17 +15,6 @@ const Header = () => {
   const {themeType} = useContext(ThemeContext);
   const path = usePathname();
   const pathname = `/${path.split('/')[1]}`;
-
-  useEffect(() => {
-    document.title = getAppTitle();
-    let link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      document.head.appendChild(link);
-    }
-    link.href = getAppIcon();
-  }, []);
 
   if (publicRoutes.includes(pathname)) {
     return null;

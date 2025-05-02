@@ -22,7 +22,6 @@ import {
   createAIDIfNotExists,
 } from 'utils/localStorageData';
 import Loading from '../Loading';
-import {getWhiteLabelInfo} from 'dok-wallet-blockchain-networks/service/dokApi';
 import {
   getWalletConnectDetails,
   setWhiteLabelInfo,
@@ -35,7 +34,6 @@ import {
 import {
   getDisableMessage,
   getGoogleAnalyticsKey,
-  getGoogleSiteVerification,
 } from 'dok-wallet-blockchain-networks/redux/cryptoProviders/cryptoProvidersSelectors';
 import DisabledView from 'components/DisabledView';
 import {MainNavigation} from 'utils/navigation';
@@ -47,9 +45,8 @@ import {
 } from 'dok-wallet-blockchain-networks/redux/wallets/walletsSlice';
 import {isLocaleSet, setUserLocale} from 'src/utils/updateLocale';
 import {masterClickHost, publicRoutes} from 'utils/common';
-import Head from 'next/head';
 
-function AppRouting({children}) {
+function AppRouting({children, wlData}) {
   const password = useSelector(getUserPassword);
   const routing = useRouter();
   const dispatch = useDispatch();
@@ -62,11 +59,9 @@ function AppRouting({children}) {
     shallowEqual,
   );
   const [rountingDone, setRoutingDone] = useState(false);
-  const [isWhiteLabelInfoFetching, setIsWhiteLabelInfoFetching] =
-    useState(true);
+
   const disableMessage = useSelector(getDisableMessage);
   const googleAnalyticsKey = useSelector(getGoogleAnalyticsKey);
-  const googleSiteVerification = useSelector(getGoogleSiteVerification);
 
   useEffect(() => {
     if (googleAnalyticsKey) {
@@ -101,7 +96,7 @@ function AppRouting({children}) {
   }, []);
 
   useEffect(() => {
-    if (isReduxStoreLoad && !isWhiteLabelInfoFetching) {
+    if (isReduxStoreLoad) {
       dispatch(resetIsAdding50MoreAddresses());
       dispatch(createIfNotExistsMasterClientId());
       let searchString = searchParams?.toString();
@@ -175,39 +170,25 @@ function AppRouting({children}) {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isReduxStoreLoad, isWhiteLabelInfoFetching]);
+  }, [isReduxStoreLoad]);
 
   useEffect(() => {
-    getWhiteLabelInfo()
-      .then(async resp => {
-        setIsWhiteLabelInfoFetching(false);
-        if (resp?.data) {
-          setWhiteLabelInfo(resp?.data);
-          const localeSetCheck = await isLocaleSet();
-          if (!localeSetCheck) {
-            setUserLocale(resp?.data?.defaultLocale || 'en');
-          }
+    setWhiteLabelInfo(wlData);
+    (async () => {
+      try {
+        const localeSetCheck = await isLocaleSet();
+        if (!localeSetCheck) {
+          setUserLocale(resp?.data?.defaultLocale || 'en');
         }
-      })
-      .catch(e => {
-        console.error('Error in fetching white label info');
-        setIsWhiteLabelInfoFetching(false);
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+      } catch {
+        console.error('error in set local', e);
+      }
+    })();
+  }, [wlData]);
 
   return (
     <>
       <div>
-        {typeof googleSiteVerification === 'string' &&
-          !!googleSiteVerification && (
-            <Head>
-              <meta
-                name='google-site-verification'
-                content={googleSiteVerification}
-              />
-            </Head>
-          )}
         {rountingDone && !disableMessage ? (
           <div className={s.container}>
             <div className={s.navbarWrapper}>{<Header />}</div>
