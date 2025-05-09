@@ -10,7 +10,7 @@ import bs58 from 'bs58';
 import {TronWeb} from 'tronweb';
 import {Wallet} from 'xrpl';
 import {InMemorySigner} from '@taquito/signer';
-import {config, IS_SANDBOX} from 'dok-wallet-blockchain-networks/config/config';
+import {config} from 'dok-wallet-blockchain-networks/config/config';
 import {DirectSecp256k1HdWallet} from '@cosmjs/proto-signing';
 import {Client} from '@xchainjs/xchain-thorchain';
 import {Keyring} from '@polkadot/keyring';
@@ -347,16 +347,16 @@ const createCardanoWallet = async mnemonic => {
   }
 };
 
-const createFilecoinWallet = async mnemonic => {
+const createFilecoinWallet = async (mnemonic, isSandbox) => {
   try {
-    const path = IS_SANDBOX ? "m/44'/1'/0'/0/0" : "m/44'/461'/0'/0/0";
+    const path = isSandbox ? "m/44'/1'/0'/0/0" : "m/44'/461'/0'/0/0";
     const seed = bip39.mnemonicToSeedSync(mnemonic);
     const bip32 = BIP32Factory(ecc).fromSeed(seed).derivePath(path);
     const privateKey = bip32.privateKey;
 
     const generatedKeypair = keyPairFromPrivateKey(
       privateKey,
-      IS_SANDBOX ? 't' : 'f',
+      isSandbox ? 't' : 'f',
     );
 
     return {
