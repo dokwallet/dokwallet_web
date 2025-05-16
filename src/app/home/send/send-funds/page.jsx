@@ -265,6 +265,7 @@ const SendFunds = () => {
                           onChange={async event => {
                             const tempValues = validateNumberInInput(
                               event.target.value,
+                              currentCoin?.decimal,
                             );
                             const tempAmount = multiplyBNWithFixed(
                               tempValues,
@@ -311,6 +312,7 @@ const SendFunds = () => {
                           onChange={async event => {
                             const tempValues = validateNumberInInput(
                               event.target.value,
+                              2,
                             );
                             const tempAmount = new BigNumber(tempValues)
                               .dividedBy(

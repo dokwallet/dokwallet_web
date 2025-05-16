@@ -19,6 +19,7 @@ import {WalletContractV4} from '@ton/ton';
 import {Account, SigningSchemeInput} from '@aptos-labs/ts-sdk';
 import {toCashAddress} from 'bchaddrjs';
 import {BlockfrostProvider, MeshWallet} from '@meshsdk/core';
+import {keyPairFromPrivateKey} from '@nodefactory/filecoin-address';
 
 const createEvmWallet = async mnemonic => {
   try {
@@ -346,6 +347,28 @@ const createCardanoWallet = async mnemonic => {
   }
 };
 
+const createFilecoinWallet = async (mnemonic, isSandbox) => {
+  try {
+    const path = isSandbox ? "m/44'/1'/0'/0/0" : "m/44'/461'/0'/0/0";
+    const seed = bip39.mnemonicToSeedSync(mnemonic);
+    const bip32 = BIP32Factory(ecc).fromSeed(seed).derivePath(path);
+    const privateKey = bip32.privateKey;
+
+    const generatedKeypair = keyPairFromPrivateKey(
+      privateKey,
+      isSandbox ? 't' : 'f',
+    );
+
+    return {
+      address: generatedKeypair.address.toString(),
+      privateKey: generatedKeypair.privateKey,
+    };
+  } catch (e) {
+    console.error('Error in createFilecoinWallet', e);
+    throw e;
+  }
+};
+
 const createWalletObj = {
   ethereum: createEvmWallet,
   base: createEvmWallet,
@@ -376,6 +399,7 @@ const createWalletObj = {
   dogecoin: createDogecoinWallet,
   aptos: createAptosWallet,
   cardano: createCardanoWallet,
+  filecoin: createFilecoinWallet,
 };
 
 const createEVMDeriveAddress = (mnemonic, startingIndex) => {

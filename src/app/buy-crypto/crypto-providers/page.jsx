@@ -259,7 +259,10 @@ const CryptoProviders = () => {
                     type={'text'}
                     name='amount'
                     onChange={e => {
-                      const tempValues = validateNumberInInput(e.target.value);
+                      const tempValues = validateNumberInInput(
+                        e.target.value,
+                        values?.selectedCoin?.options?.decimal,
+                      );
                       setFieldValue('amount', tempValues);
                       onSubmit({...values, amount: tempValues}, true);
                     }}

@@ -1,6 +1,6 @@
 import {sha256} from 'js-sha256';
-import {isEVMChain} from 'dok-wallet-blockchain-networks/helper';
-export async function generateSHA256ForCoins(coins) {
+
+export async function generateSHA256ForCoins(coins, isEVMChain) {
   const coinData = Array.isArray(coins) ? coins : [];
   if (coinData.length) {
     let coinNames = [];
