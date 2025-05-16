@@ -45,6 +45,7 @@ import {
 } from 'dok-wallet-blockchain-networks/redux/wallets/walletsSlice';
 import {isLocaleSet, setUserLocale} from 'src/utils/updateLocale';
 import {masterClickHost, publicRoutes} from 'utils/common';
+import {setWLAppName} from 'utils/wlData';
 
 function AppRouting({children, wlData}) {
   const password = useSelector(getUserPassword);
@@ -174,6 +175,7 @@ function AppRouting({children, wlData}) {
 
   useEffect(() => {
     setWhiteLabelInfo(wlData);
+    setWLAppName(wlData?.name);
     (async () => {
       try {
         const localeSetCheck = await isLocaleSet();

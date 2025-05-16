@@ -85,7 +85,10 @@ const ReceivePaymentUrl = () => {
                   }}
                   name='amount'
                   onChange={e => {
-                    const tempValues = validateNumberInInput(e.target.value);
+                    const tempValues = validateNumberInInput(
+                      e.target.value,
+                      values?.coin?.options?.decimal,
+                    );
                     setFieldValue('amount', tempValues);
                     dispatch(setPaymentUrlAmount(tempValues));
                     const tempAmount = multiplyBNWithFixed(
@@ -115,7 +118,7 @@ const ReceivePaymentUrl = () => {
                   }}
                   name='amount'
                   onChange={e => {
-                    const tempValues = validateNumberInInput(e.target.value);
+                    const tempValues = validateNumberInInput(e.target.value, 2);
                     setFieldValue('currencyAmount', tempValues);
                     dispatch(setPaymentUrlCurrencyAmount(tempValues));
                     console.log('valoues', values?.coin);
