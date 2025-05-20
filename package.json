@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "git:update": "git submodule update --init --recursive --remote"
+    "git:update": "git submodule update --init --recursive --remote",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@anza-xyz/solana-rpc-get-stake-activation": "^1.0.1",
