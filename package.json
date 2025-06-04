@@ -76,7 +76,7 @@
     "ethers-decode-error": "^2.1.3",
     "filecoin.js": "^0.0.5-alpha",
     "formik": "^2.4.5",
-    "got": "^14.4.7",
+    "got": "^11.8.6",
     "http-browserify": "^1.7.0",
     "js-sha256": "^0.10.1",
     "lokijs": "1.x",
@@ -126,12 +126,15 @@
   },
   "resolutions": {
     "elliptic": "^6.6.1",
+    "got": "^11.8.6",
     "@cosmjs/launchpad/**/axios": "^0.30.0",
     "@cosmos-client/core/**/axios": "^0.30.0",
     "@zondax/filecoin-signing-tools/**/axios": "^0.30.0",
     "@xchainjs/xchain-client/**/axios": "^1.9.0",
     "@xchainjs/xchain-cosmos/**/axios": "^1.9.0",
     "@xchainjs/xchain-thorchain/**/axios": "^1.9.0",
-    "tronweb/**/axios": "^1.9.0"
+    "tronweb/**/axios": "^1.9.0",
+    "prebuild-install/tar-fs": "^2.1.3",
+    "sharp/tar-fs": "^3.0.9"
   }
 }
