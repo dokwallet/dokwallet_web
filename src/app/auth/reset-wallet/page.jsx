@@ -2,13 +2,14 @@
 import styles from './ResetWallet.module.css';
 import React, {useContext, useLayoutEffect, useState} from 'react';
 
-const icons = require(`assets/images/icons`).default;
 import {useRouter, useSearchParams} from 'next/navigation';
 import Link from 'next/link';
 import ModalReset from 'components/ModalReset';
 import Image from 'next/image';
 import {getAppAssets} from 'whitelabel/whiteLabelInfo';
 import {ThemeContext} from 'theme/ThemeContext';
+import CreateWalletSVG from 'assets/images/icons/create_wallet.svg';
+import ImportWalletSVG from 'assets/images/icons/import_wallet.svg';
 
 // import { loadingOn } from "redux/auth/authSlice";
 // import { ThemeContext } from "../../../../ThemeContext";
@@ -59,7 +60,7 @@ const ResetWallet = () => {
           </p>
 
           <span className={styles.learnText}>
-            <Link href='reset-wallet/learn-reset' target='_blank'>
+            <Link href={'/auth/learn-reset'} target='_blank'>
               Learn more
             </Link>
           </span>
@@ -87,23 +88,17 @@ const ResetWallet = () => {
                   }`,
                 );
               }}
-              style={{
-                backgroundColor: '#FF4C00',
-              }}
               className={styles.btn}>
-              <div className={styles.icon_plus}>{icons.plus}</div>
-              <div
-                className={styles.icon_create}
-                style={{width: '113', height: '113'}}>
+              <div>
                 {getAppAssets()?.[`wallet_create`]?.[themeType] ? (
                   <Image
                     src={getAppAssets()?.[`wallet_create`]?.[themeType]}
-                    width={122}
-                    height={124}
+                    width={150}
+                    height={150}
                     alt={'create-wallet'}
                   />
                 ) : (
-                  icons.reset_create
+                  <CreateWalletSVG />
                 )}
               </div>
               <div className={styles.textBox}>
@@ -113,13 +108,6 @@ const ResetWallet = () => {
             </button>
 
             <button
-              // activeOpacity={1}
-              // onPress={() =>
-              //   navigation.navigate("ImportWallet", {
-              //     isAdd: !!isFromOnBoarding,
-              //   })
-              // }
-
               onClick={() =>
                 router.push(
                   `/auth/import-wallet${
@@ -127,36 +115,17 @@ const ResetWallet = () => {
                   }`,
                 )
               }
-              style={{
-                backgroundColor: 'var(--font)',
-              }}
               className={styles.btn}>
-              <div className={styles.icon_arrow}>
-                <svg
-                  className={styles.icon_arrow}
-                  viewBox='0 0 17 17'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'>
-                  <path
-                    d='M15.7 8.7002L8.80005 15.7002M1.80005 8.80019L15.7 8.7002L1.80005 8.80019ZM15.7 8.7002L8.70005 1.7002L15.7 8.7002Z'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  />
-                </svg>
-              </div>
-              <div
-                className={styles.icon_create}
-                style={{width: '108', height: '101'}}>
+              <div className={styles.icon_create}>
                 {getAppAssets()?.[`wallet_import`]?.[themeType] ? (
                   <Image
                     src={getAppAssets()?.[`wallet_import`]?.[themeType]}
-                    width={122}
-                    height={124}
+                    width={150}
+                    height={150}
                     alt={'create-wallet'}
                   />
                 ) : (
-                  icons.reset_import
+                  <ImportWalletSVG />
                 )}
               </div>
               <div className={styles.textBox2}>

@@ -15,8 +15,9 @@ import {addOTC} from 'dok-wallet-blockchain-networks/service/dokApi';
 import {getUserCoinsOptions} from 'dok-wallet-blockchain-networks/redux/wallets/walletsSelector';
 import {ThemeContext} from 'theme/ThemeContext';
 import {getOTCData} from 'dok-wallet-blockchain-networks/redux/extraData/extraSelectors';
-import {currencyIcon, other, otherDark} from 'data/currency';
+import {currencyIcon} from 'data/currency';
 import {toast} from 'react-toastify';
+import {getAppIcon, getAppIconDark} from 'whitelabel/whiteLabelInfo';
 
 const amountOptions = [
   {
@@ -68,7 +69,7 @@ const OTC2Screen = () => {
     label: 'Other',
     value: 'Other',
     options: {
-      icon: themeType === 'light' ? other : otherDark,
+      icon: themeType === 'light' ? getAppIcon() : getAppIconDark(),
       title: 'Other',
     },
   };

@@ -887,7 +887,7 @@ const CommonTransfer = () => {
               backgroundColor:
                 isDisabled || isSubmitting || isFetchingFeesAgain
                   ? '#708090'
-                  : '#F44D03',
+                  : 'var(--background)',
             }}
             onClick={handleSubmitForm}>
             <p className={s.buttonTitle}>Send</p>

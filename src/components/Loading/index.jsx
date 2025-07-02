@@ -4,7 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Loading = ({
   size = 40,
   height = 'calc(var(--app-height) - 70px)',
-  color = '#F44D03',
+  color = 'var(--background)',
 }) => {
   return (
     <div

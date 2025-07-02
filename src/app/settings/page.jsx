@@ -10,9 +10,7 @@ import {
 import {
   updateChatOptions,
   updateFeesOptions,
-  updateFingerprint,
 } from 'dok-wallet-blockchain-networks/redux/settings/settingsSlice';
-import {fingerprintAuthOut} from 'dok-wallet-blockchain-networks/redux/auth/authSlice';
 import s from './Settings.module.css';
 
 const icons = require(`assets/images/settings`).default;
@@ -123,40 +121,7 @@ const Settings = ({navigation}) => {
             <p className={s.btnText}>Manage your seed phrase</p>
           </div>
         </Link>
-        {/* /////////////////////////////// */}
-        {/* <div
-          className={s.btn}
-          style={{ justifyContent: "space-between" }}
-          href=      >
-          <div className={{ flexDirection: "row", alignItems: "center" }}>
-            <Change width="24" height="22" fill={theme.font} />
-            <div className={s.box}>
-              <p className={s.btnTitle}>Login with Fingerprint</p>
-              <p className={s.btnText}>
-                {isSwitchOn === false ? "No set" : "Set"}
-              </p>
-            </div>
-          </div>
-          <Switch
-            value={isSwitchOn}
-            onValueChange={onToggleSwitch}
-            trackColor={{ false: "gray", true: "#E8E8E8" }}
-            thumbColor={isSwitchOn ? "#F44D03" : "white"}
-            ios_backgroundColor="#E8E8E8"
-          />
-        </div> */}
-
-        {/* /////////////////////////////// */}
         <p className={s.title}>General</p>
-        {/*<button className={s.btn}>*/}
-        {/*  {icons.rate}*/}
-
-        {/*  <div className={s.box}>*/}
-        {/*    <p className={s.btnTitle}>Rate our App</p>*/}
-        {/*    <p className={s.btnText}>Rate & Review us</p>*/}
-        {/*  </div>*/}
-        {/*</button>*/}
-        {/* /////////////////////////////// */}
         <div className={s.btn}>
           {icons.changeLanguage}
           <div className={s.box}>

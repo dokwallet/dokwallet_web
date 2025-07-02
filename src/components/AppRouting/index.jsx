@@ -44,8 +44,10 @@ import {
   resetIsAdding50MoreAddresses,
 } from 'dok-wallet-blockchain-networks/redux/wallets/walletsSlice';
 import {isLocaleSet, setUserLocale} from 'src/utils/updateLocale';
-import {masterClickHost, publicRoutes} from 'utils/common';
+import {masterClickHost, publicRoutes, allPublicRoutes} from 'utils/common';
 import {setWLAppName} from 'utils/wlData';
+import {ThemeProvider} from '@mui/system';
+import {createDynamicTheme} from 'src/theme';
 
 function AppRouting({children, wlData}) {
   const password = useSelector(getUserPassword);
@@ -151,8 +153,8 @@ function AppRouting({children, wlData}) {
         hostname = window?.location?.hostname;
       }
       if (
-        publicRoutes.includes(pathname) &&
-        masterClickHost.includes(hostname)
+        allPublicRoutes.includes(pathname) ||
+        (publicRoutes.includes(pathname) && masterClickHost.includes(hostname))
       ) {
         setRoutingDone(true);
       } else {
@@ -188,8 +190,10 @@ function AppRouting({children, wlData}) {
     })();
   }, [wlData]);
 
+  const isKimlWallet = wlData?._id === '65efefca5f95b9f06cc8f9eb';
   return (
-    <>
+    <ThemeProvider
+      theme={createDynamicTheme(isKimlWallet ? '#4F8DD8' : '#F44D03')}>
       <div>
         {rountingDone && !disableMessage ? (
           <div className={s.container}>
@@ -215,7 +219,7 @@ function AppRouting({children, wlData}) {
         pauseOnHover
         theme={themeType === 'light' ? 'light' : 'dark'}
       />
-    </>
+    </ThemeProvider>
   );
 }
 
