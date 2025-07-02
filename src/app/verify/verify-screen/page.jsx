@@ -119,16 +119,16 @@ export const Verify = () => {
                       borderStyle: 'solid',
                       backgroundColor:
                         item.audit === true
-                          ? '#F44D03'
+                          ? 'var(--background)'
                           : '#CCC8C6' && item.audit === false
                             ? '#FFF7E5'
                             : '#CCC8C6',
                       color:
                         item.audit === true
                           ? '#fff'
-                          : '#F44D03' && item.audit === false
+                          : 'var(--background)' && item.audit === false
                             ? '#FF647C'
-                            : '#F44D03',
+                            : 'var(--background)',
                     }}>
                     {item.id}
                   </p>
@@ -244,7 +244,7 @@ export const Verify = () => {
                 disabled={!checked}
                 className={styles.btn}
                 style={{
-                  backgroundColor: checked ? '#F44D03' : '#708090',
+                  backgroundColor: checked ? 'var(--background)' : '#708090',
                 }}
                 // onPress={() =>
                 //   verify === true

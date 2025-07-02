@@ -764,8 +764,8 @@ const Exchange = ({}) => {
         <button
           className={s.button}
           style={{
-            backgroundColor: isButtonDisabled ? '#708090' : '#F44D03',
-            borderBlockColor: isButtonDisabled ? '#708090' : '#F44D03',
+            backgroundColor: isButtonDisabled ? '#708090' : 'var(--background)',
+            borderBlockColor: isButtonDisabled ? '#708090' : 'var(--background)',
           }}
           onClick={handleSubmit}
           disabled={isButtonDisabled}>

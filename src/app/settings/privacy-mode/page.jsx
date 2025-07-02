@@ -11,7 +11,7 @@ import Image from 'next/image';
 import s from './privacy-mode.module.css';
 import {Switch} from '@mui/material';
 import GoBackButton from 'components/GoBackButton';
-const logo = require(`assets/images/sidebarIcons/LogoSingle.svg`).default;
+import {getAppIcon} from 'whitelabel/whiteLabelInfo';
 
 const PrivacyMode = () => {
   const currentWalletName = useSelector(selectCurrentWallet)?.walletName;
@@ -38,7 +38,7 @@ const PrivacyMode = () => {
                       alt='avatar'
                       width={54}
                       height={54}
-                      src={logo}
+                      src={getAppIcon()}
                     />
 
                     {item?.walletName === currentWalletName && (

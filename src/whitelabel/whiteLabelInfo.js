@@ -17,6 +17,10 @@ const dokwalletWalletConnectDetails = {
 export const setWhiteLabelInfo = info => {
   whiteLabelInfo = info;
   setWhiteLabelIdToDokApi(getWhiteLabelId());
+  const isKimlWallet = whiteLabelInfo?._id === '65efefca5f95b9f06cc8f9eb';
+  if (isKimlWallet) {
+    document.documentElement.style.setProperty('--background', '#4F8DD8');
+  }
 };
 
 export const getHostName = () => {
@@ -64,6 +68,10 @@ export const getWhiteLabelId = () => {
 
 export const getAppIcon = () => {
   return whiteLabelInfo?.appIcon?.light ?? '/dokwallet.ico';
+};
+
+export const getAppIconDark = () => {
+  return whiteLabelInfo?.appIcon?.dark ?? '/dokwallet.ico';
 };
 
 export const getAppAssets = () => {

@@ -82,7 +82,7 @@ export const VerifyInfoModal = ({visible, onClose}) => {
                 disabled={!infoCheck}
                 className={styles.btnVerify}
                 style={{
-                  backgroundColor: infoCheck ? '#F44D03' : '#708090',
+                  backgroundColor: infoCheck ? 'var(--background)' : '#708090',
                 }}
                 onClick={() => {
                   onClose();
@@ -95,7 +95,7 @@ export const VerifyInfoModal = ({visible, onClose}) => {
                 disabled={!infoCheck}
                 className={styles.btnLater}
                 style={{
-                  color: infoCheck ? '#F44D03' : '#708090',
+                  color: infoCheck ? 'var(--background)' : '#708090',
                 }}
                 onClick={() => {
                   router.push('/home');

@@ -30,7 +30,7 @@ import {closestCenter, DndContext} from '@dnd-kit/core';
 import {restrictToParentElement} from '@dnd-kit/modifiers';
 import {SortableContext, verticalListSortingStrategy} from '@dnd-kit/sortable';
 import SortableItem from 'components/Sortable/sortable';
-const logo = require(`assets/images/sidebarIcons/LogoSingle.svg`).default;
+import {getAppIcon} from 'whitelabel/whiteLabelInfo';
 
 function getStyle(style) {
   if (style.transform) {
@@ -225,7 +225,7 @@ const Wallets = () => {
                                 alt='avatar'
                                 width={54}
                                 height={54}
-                                src={logo}
+                                src={getAppIcon()}
                               />
 
                               {item?.walletName === currentWalletName && (

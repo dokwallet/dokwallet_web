@@ -52,15 +52,13 @@ const BuyCrypto = () => {
                 />
                 <div className={styles.textContainer}>
                   <p className={styles.cardTitle}>
-                    {index === 0
-                      ? `Credit Card\nBank Transfer\nAlternative Payment Method`
-                      : 'OTC'}
+                    {index === 0 ? `Credit Card\nBank Transfer` : 'OTC'}
                   </p>
-                  {index === 1 && (
-                    <p className={styles.cardDescription}>
-                      {`(Must be over ${currencySymbol[localCurrency]}10000)`}
-                    </p>
-                  )}
+                  <p className={styles.cardDescription}>
+                    {index === 1
+                      ? `(Must be over ${currencySymbol[localCurrency]}10000)`
+                      : 'Alternative Payment Method'}
+                  </p>
                 </div>
               </div>
             </button>

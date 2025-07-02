@@ -191,7 +191,7 @@ const ExchangeConfirm = () => {
               disabled={isDisabled}
               className={s.button}
               style={{
-                backgroundColor: isDisabled ? '#708090' : '#F44D03',
+                backgroundColor: isDisabled ? '#708090' : 'var(--background)',
               }}
               onClick={handleSubmitForm}>
               <p className={s.buttonTitle}>Send</p>

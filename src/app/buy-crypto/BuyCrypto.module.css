@@ -23,7 +23,7 @@
 }
 .textContainer {
   position: absolute;
-  bottom: 20px;
+  bottom: 12px;
   overflow: hidden;
   width: 100%;
   z-index: 999;

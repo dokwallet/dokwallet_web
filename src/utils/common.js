@@ -236,6 +236,8 @@ export const downloadCsv = arrayData => {
   document.body.removeChild(link);
 };
 
+export const allPublicRoutes = ['/auth/learn-reset/'];
+
 export const publicRoutes = [
   '/masterclick-privacy-policy/',
   '/masterclick-terms-conditions/',
