@@ -36,12 +36,7 @@ const CryptoCheckbox = ({
   return (
     <div className={styles.checkbox}>
       <FormControlLabel
-        control={
-          <Checkbox
-            checked={checked}
-            onChange={toggleCheckbox}
-          />
-        }
+        control={<Checkbox checked={checked} onChange={toggleCheckbox} />}
       />
 
       {number !== '3' ? (
