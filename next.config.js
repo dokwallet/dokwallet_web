@@ -91,6 +91,70 @@ const nextConfig = {
     });
     return config;
   },
+  async rewrites() {
+    return [
+      // Your existing rewrites...
+
+      // Handle ONLY specific mobile app files - leave other .well-known files untouched
+      {
+        source: '/.well-known/apple-app-site-association',
+        destination: '/api/.well-known/apple-app-site-association',
+      },
+      {
+        source: '/.well-known/assetlinks.json',
+        destination: '/api/.well-known/assetlinks.json',
+      },
+    ];
+  },
+  async headers() {
+    return [
+      // Your existing headers...
+
+      // Headers for ONLY mobile app specific files
+      {
+        source: '/.well-known/apple-app-site-association',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/json',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, OPTIONS',
+          },
+        ],
+      },
+      {
+        source: '/.well-known/assetlinks.json',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/json',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, OPTIONS',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
